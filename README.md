@@ -55,10 +55,17 @@ Preview what users will see if this webpage is shared on Facebook. Uses the webp
     1. Make a copy of `.env.template` and enter the path to your Chrome browser and the path to your private key if you have one.
     2. `npm run sign:chrome`. This is equivalent to doing it via the UI.
     3. You'll receive a signed `.crx` file to distribute. Save the private key.
-- Install the `.crx`
+- Install the `.crx` (in some Chromium browsers, but not Google Chrome and potentially not Edge)
     1. Open `chrome://extensions`
     2. Turn on Developer mode
     3. Drag and drop the `.crx` onto the page
+- Install the `.crx` in Google Chrome (and Edge if the above doesn't work)
+    - NOTE: Google Chrome doesn't allow installing off-store extensions anymore. These steps are the same as loading the extension from source above.
+    1. Unzip the extension like any other ZIP file into its own directory.
+    2. Open `chrome://extensions`
+    3. Turn on Developer mode
+    4. Choose `Load unpacked`
+    5. Select the folder you extracted the extension into
 
 ### Submitting
 
