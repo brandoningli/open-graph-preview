@@ -1,16 +1,11 @@
 (function() {
-    /**
-     * Check and set a global guard variable.
-     * If this content script is injected into the same page again,
-     * it will do nothing next time.
-     */
     if (window.hasRun) {
       return;
     }
     window.hasRun = true;
   
     browser.runtime.onMessage.addListener((message) => {
-      if(message.command === "getog") {
+      if(message.command === "getOg") {
         var document_og_title_el = document.querySelector("meta[property='og:title']");
         var document_og_title = "";
         if(document_og_title_el) {
@@ -41,7 +36,7 @@
           document_og_type = document_og_type_el.getAttribute('content');
         }
 
-        var sending = browser.runtime.sendMessage({
+        browser.runtime.sendMessage({
           og_title: document_og_title,
           og_image: document_og_image,
           og_description: document_og_description,

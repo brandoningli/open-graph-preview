@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css"/>
+  </head>
+
+<body class="open-graph-preview">
+  <div id="og-container">
+    <div id="img-container">
+    <img id="og_image" class="loading" src="loader.gif" width="100%" height="274">
+    </div>
+    <div id="text-container">
+        <div id="og_url" class="truncate"></div>
+        <h1 id="og_title" class="truncate">Looking for the og:title tag</h1>
+        <div id="og_description" class="truncate">Looking for the og:description tag</div>
+    </div>
+  </div>
+
+  <div id="button-container">
+    <div id="download-button" class="button primary-button">Download</div>
+    <div id="contain-button" class="button secondary-button">Change Image Fit</div>
+  </div>
+
+  <script type="application/javascript" src="/browser-polyfill.min.js"></script>
+  <script type="application/javascript" src="html2canvas.patched.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>

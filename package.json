@@ -1,0 +1,18 @@
+{
+  "name": "open-graph-preview",
+  "version": "1.1.0",
+  "description": "Preview what users will see if this webpage is shared on Facebook. Uses the webpage's OG tags.",
+  "private": true,
+  "scripts": {
+    "build": "web-ext build -o --source-dir ./extension/",
+    "sign:firefox": "node scripts/sign_firefox.js",
+    "sign:chrome": "node scripts/sign_chrome.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brandon Ingli, apiaget",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "web-ext": "^7.6.2"
+  }
+}
